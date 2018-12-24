@@ -104,7 +104,7 @@
   "name": "oa",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mubaidr/vue-electron-template.git"
+    "url": "https://gitee.com/sea_dogs/electron.git"
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production npm run pack && electron-builder",
