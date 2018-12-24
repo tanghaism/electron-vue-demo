@@ -1,5 +1,3 @@
-<p align="center"><img src="./LogoDesigns/logotype1blue.png"></p>
-
 # Vue-Electron-Template Demo
 
 [![Build status](https://ci.appveyor.com/api/projects/status/cjua6pdhjp9rqa1o?svg=true)](https://ci.appveyor.com/project/mubaidr/vue-electron-template)
