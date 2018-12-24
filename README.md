@@ -6,12 +6,6 @@
 electron使用vue的样板
 
 ```bash
-# Clone this repository
-git clone https://github.com/mubaidr/vue-electron
-
-# change directory to cloned path
-cd vue-electron
-
 # Install dependencies
 npm install --unsafe-perm=true --allow-root
 
