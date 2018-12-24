@@ -6,6 +6,7 @@ const path = require('path')
 const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 // const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
@@ -52,12 +53,6 @@ const rendererConfig = {
       {
         test: /\.html$/,
         use: 'vue-html-loader',
-      },
-      {
-        enforce: 'pre',
-        test: /\.(js|vue)$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
       },
       {
         test: /\.js$/,
@@ -148,12 +143,23 @@ const rendererConfig = {
  */
 if (process.env.NODE_ENV === 'production') {
   rendererConfig.plugins.push(
+    new UglifyJsPlugin({
+      uglifyOptions: {
+        compress: {
+          warnings: false,
+          drop_debugger: true,
+          drop_console: true
+        }
+      },
+      sourceMap: false,
+      parallel: true
+    }),
     new CopyWebpackPlugin([
       {
         from: path.join(__dirname, '../static'),
         to: path.join(__dirname, '../dist/electron/static'),
       },
-    ]),
+    ])
   )
 }
 

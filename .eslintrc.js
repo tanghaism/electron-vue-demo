@@ -1,13 +1,13 @@
 module.exports = {
-  root: true,
+  root: false,
   // parser: 'babel-eslint',
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 8
   },
   env: {
-    browser: true,
-    node: true
+    browser: false,
+    node: false
   },
   extends: ['airbnb-base', 'plugin:vue/recommended', 'prettier'],
   globals: {

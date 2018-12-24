@@ -5,7 +5,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/cjua6pdhjp9rqa1o?svg=true)](https://ci.appveyor.com/project/mubaidr/vue-electron-template)
 [![Build Status](https://travis-ci.org/mubaidr/vue-electron-template.svg?branch=master)](https://travis-ci.org/mubaidr/vue-electron-template)
 
-The boilerplate for electron applications using vue.js
+electron使用vue的样板
 
 > **Checkout (experimental) [vue-electron-template](https://github.com/mubaidr/vue-electron-template/tree/rollup) using Rollup.js**
 
@@ -43,7 +43,7 @@ git clone https://github.com/mubaidr/vue-electron
 cd vue-electron
 
 # Install dependencies
-npm install
+npm install --unsafe-perm=true --allow-root
 
 # Run in `DEV` mode
 npm run dev

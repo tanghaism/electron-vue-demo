@@ -1,9 +1,9 @@
 process.env.BABEL_ENV = 'main'
 
-const path = require('path')
-const { dependencies } = require('../package.json')
+let path = require('path')
+let { dependencies } = require('../package.json')
 
-const mainConfig = {
+let mainConfig = {
   mode: process.env.NODE_ENV,
   entry: {
     main: path.join(__dirname, '../src/main/index.js'),
@@ -11,12 +11,6 @@ const mainConfig = {
   externals: [...Object.keys(dependencies || {})],
   module: {
     rules: [
-      {
-        enforce: 'pre',
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
-      },
       {
         test: /\.js$/,
         use: 'babel-loader',

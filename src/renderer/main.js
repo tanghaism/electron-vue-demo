@@ -1,15 +1,9 @@
 import Vue from 'vue'
-
-import 'bulma-addons/bulma.sass'
-import 'bulma-pro/bulma.sass'
-
-import './assets/style/main.sass'
-import './assets/style/animations.sass'
-import './assets/fontawesome/css/fontawesome-all.css'
-
+import './assets/scss/_index.scss'
 import App from './App'
 import router from './router'
 import store from './store'
+
 
 Vue.config.productionTip = false
 Vue.config.devtools = true
